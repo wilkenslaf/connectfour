@@ -138,6 +138,13 @@ bool isWon(int row , int col){//  row 1  col 5
 	//check Diag1 User Story 1
 	
 	//check Diag2 User Story 2
+	// Check upwards
+	for (int i = 1; row - i >= 1 && col - i >= 0 && board[row - i][col - i] == val; i++)
+		winDiag2++;
+	// Check downwards
+	for (int i = 1; row + i < x && col + i < y && board[row + i][col + i] == val; i++)
+		winDiag2++;
+	if (winDiag2 >= 4) return true;
 	
 
 	
